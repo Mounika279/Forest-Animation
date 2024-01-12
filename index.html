@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         
+        /* @media screen and (min-width:481)and(max-width:768){
+            .background{
+                background-size: cover;
+            }
+        }
+        @media screen and (min-width:769)and(max-width:1200){
+            .background{
+                background-size: cover;
+            }
+        } */
+       
+        .monkey {
+            position: relative;
+            top: -87vh;
+            left: 25vh;
+            animation: monkeyMove 20s ease-in-out , monkeyDisappear 15s forwards; 
+        }
+        @keyframes monkeyMove {
+            0% {
+                transform: translateX(0px);
+            }
+            50% {
+                 transform: translateX(80px); 
+            }
+            100% {
+                transform: translateX(100px);
+                visibility: hidden;
+            }
+        }
+        @keyframes monkeyDisappear {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 1;
+            
+            }
+        }
+        .lion {
+            position: relative;
+            top: -40vh;
+            left: 30vh;
+            opacity: 0;
+            visibility: hidden; 
+            animation: lionAppear 30s ease-in-out 5s forwards, lionMove 30s ease-in-out 6s forwards; 
+        }
+        @keyframes lionAppear {
+            0% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            30%{
+                opacity:1;
+                visibility: visible;
+            }
+            100% {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        @keyframes lionMove {
+            0% {
+                transform: translateX(200px);
+                opacity:1;
+                visibility: visible;
+            }
+            50%{
+                transform: translateX(400px);
+                opacity:1;
+                visibility: visible;
+            }
+            100% {
+                transform: translateX(700px); 
+                visibility: visible;
+               
+            }
+        } 
+        .parrot {
+            position: relative;
+            top: -93vh;
+            left:180vh;
+            opacity: 0;
+            visibility: hidden;
+            animation: parrotAppear 20s ease-in 10s forwards, parrotMove 10s ease-in 21s forwards; 
+        }
+        @keyframes parrotAppear {
+            0% {
+                opacity: 0;
+                visibility: hidden;
+            }
+            50%{
+                opacity: 1;
+                visibility: visible;
+
+            }
+            100% {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        @keyframes parrotMove {
+            0% {
+                transform: translateY(-50px);
+                opacity:1;
+            }
+            50%{
+                transform: translateX(-100px);
+                opacity:1;
+                visibility: visible;
+            }
+            100% {
+                transform: translateY(-100px);
+                opacity:1;
+                visibility: visible;
+            }
+        }
+        .snake {
+            position: relative;
+            top: -60vh;
+            left: 40vh;
+            transform: skewX(40deg);
+            opacity: 0;
+            visibility: hidden;
+            animation: snakeAppear 40s ease-in-out forwards, snakeMove 40s ease-in-out forwards;
+        }
+        @keyframes snakeAppear {
+            0% {
+                opacity: 1;
+                visibility: hidden;
+            }
+            100% {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        @keyframes snakeMove {
+            0% {
+                transform: translateX(100px);
+                visibility: visible;
+            }
+            50%{
+                transform: translateX(800px);
+                visibility: visible;
+            }
+            100% {
+                transform: translateX(800px);
+                opacity: 0;
+                visibility: visible;
+            }
+        }  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="forest">
+        <audio controls autoplay loop><source src="./Forest Sounds.mp3"></audio>
+            <div class="background"><p><img src="./forest-monkey.jpg" height="700" width="1500"></p></div>
+            <div class="monkey"><img src="./monkey.png" height="100" width="150"></div>
+            <div class="lion"><img src="./lion.png" height="100" width="150"></div> 
+            <div class="parrot"><img src="./bunting.png" height="100" width="150"></div>
+             <div class="snake"><img src="./snake.png"width="200" height="50"></div>
+        </div>
+    </div>
+</body>
+</html>
